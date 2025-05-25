@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  :root {
+    /* Couleurs de base - Mode clair premium */
+    --background: 210 40% 98%;
+    --foreground: 220 45% 18%;
+
+    /* Cartes et éléments d'interface */
+    --card: 0 0% 100%;
+    --card-foreground: 220 45% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 45% 18%;
+
+    /* Couleur primaire - Bleu premium */
+    --primary: 215 80% 30%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Couleur secondaire - Accent subtil */
+    --secondary: 210 25% 92%;
+    --secondary-foreground: 215 80% 30%;
+
+    /* Éléments muted et accents */
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 25% 40%;
+    --accent: 215 80% 94%;
+    --accent-foreground: 215 80% 30%;
+
+    /* Autres couleurs utilitaires */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 20% 91%;
+    --input: 214 20% 91%;
+    --ring: 215 80% 30%;
+
+    /* Couleurs pour graphiques et visualisations */
+    --chart-1: 215 80% 30%;
+    --chart-2: 205 70% 41%;
+    --chart-3: 220 65% 35%;
+    --chart-4: 195 80% 40%;
+    --chart-5: 225 70% 40%;
+
+    --radius: 0.5rem;
+  }
+  .dark {
+    /* Couleurs de base - Mode sombre élégant */
+    --background: 220 45% 10%;
+    --foreground: 210 40% 98%;
+
+    /* Cartes et éléments d'interface */
+    --card: 220 45% 13%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 45% 13%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Couleur primaire - Bleu acier */
+    --primary: 215 60% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Couleur secondaire - Accent subtil */
+    --secondary: 215 40% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Éléments muted et accents */
+    --muted: 215 40% 17%;
+    --muted-foreground: 210 30% 70%;
+    --accent: 215 40% 20%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Autres couleurs utilitaires */
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 40% 20%;
+    --input: 215 40% 20%;
+    --ring: 215 60% 50%;
+
+    /* Couleurs pour graphiques et visualisations */
+    --chart-1: 215 60% 50%;
+    --chart-2: 195 70% 50%;
+    --chart-3: 245 60% 60%;
+    --chart-4: 175 70% 45%;
+    --chart-5: 355 80% 60%;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
