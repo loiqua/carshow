@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { label: "Accueil", href: "/" },
-  { label: "Recherche", href: "/cars" },
+  { label: "Recherche", href: "/search" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -39,9 +39,9 @@ export function Navbar() {
         </div>
         <div className="flex items-center gap-4">
           <ThemeToggle />
-          <Link href="/cars">
+          <Link href="/intranet">
             <Button variant="outline" size="sm" className="font-medium hover:bg-primary hover:text-white transition-colors">
-              Voir nos véhicules
+              Intranet
             </Button>
           </Link>
         </div>

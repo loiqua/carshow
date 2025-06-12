@@ -6,11 +6,11 @@ import { Button } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { label: "Tous les véhicules", href: "/cars" },
-  { label: "Berlines", href: "/cars?type=Berline" },
-  { label: "SUV", href: "/cars?type=SUV" },
-  { label: "Coupés", href: "/cars?type=Coupé" },
-  { label: "Cabriolets", href: "/cars?type=Cabriolet" },
+  { label: "Tous les véhicules", href: "/search" },
+  { label: "Berlines", href: "/search?type=Berline" },
+  { label: "SUV", href: "/search?type=SUV" },
+  { label: "Coupés", href: "/search?type=Coupé" },
+  { label: "Cabriolets", href: "/search?type=Cabriolet" },
 ];
 
 export function CarsNavbar() {
@@ -22,7 +22,7 @@ export function CarsNavbar() {
       <div className="container flex h-14 items-center">
         <div className="mr-4 hidden md:flex">
           <Link 
-            href="/cars" 
+            href="/search" 
             className="mr-6 flex items-center space-x-2 font-semibold"
           >
             <span className="hidden sm:inline-block">Catalogue Véhicules</span>

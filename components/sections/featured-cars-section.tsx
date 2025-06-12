@@ -65,7 +65,7 @@ export function FeaturedCarsSection() {
                   <p className="text-sm text-muted-foreground mt-1">{car.brand} • {car.model}</p>
                   <div className="mt-4 flex items-center justify-between">
                     <span className="font-bold text-primary">€{car.price}</span>
-                    <Link href={`/cars/${car.id}`}>
+                    <Link href={`/search/${car.id}`}>
                       <Button 
                         size="sm" 
                         variant="outline" 

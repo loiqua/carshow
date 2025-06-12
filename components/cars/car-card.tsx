@@ -101,7 +101,7 @@ export function CarCard({ car, showActions = true }: CarCardProps) {
       {showActions && (
         <CardFooter className="flex gap-2 p-4 pt-0">
           <Button asChild className="w-full">
-            <Link href={`/cars/${car.id}`}>
+            <Link href={`/search/${car.id}`}>
               Voir en détail
             </Link>
           </Button>
