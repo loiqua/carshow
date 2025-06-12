@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function BrandsSection() {
   const brands = ['Mercedes', 'BMW', 'Audi', 'Porsche', 'Ferrari', 'Lamborghini'];
@@ -25,24 +26,29 @@ export function BrandsSection() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mt-8 w-full">
             {brands.map((brand, index) => (
-              <motion.div 
+              <Link 
+                href={`/search?brand=${encodeURIComponent(brand)}&motorType=all_motor_types&color=all_colors&type=all_vehicle_types`}
                 key={brand}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-                className="flex flex-col items-center space-y-3"
+                className="no-underline"
               >
-                <div className="p-4 bg-muted rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-muted/80 border border-primary/10">
-                  <div className="w-20 h-20 flex items-center justify-center">
-                    <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-primary to-primary/70">
-                      {brand}
-                    </span>
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                  className="flex flex-col items-center space-y-3"
+                >
+                  <div className="p-4 bg-muted rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 hover:bg-muted/80 border border-primary/10">
+                    <div className="w-20 h-20 flex items-center justify-center">
+                      <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-primary to-primary/70">
+                        {brand}
+                      </span>
+                    </div>
                   </div>
-                </div>
-                <span className="text-sm font-medium">{brand}</span>
-              </motion.div>
+                  <span className="text-sm font-medium text-foreground">{brand}</span>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </motion.div>
