@@ -104,6 +104,7 @@ Le projet suit une approche méthodique :
 3. Vérification du bon fonctionnement
 4. Commits conventionnels pour chaque fonctionnalité
 
+# deploy
 ## 🔐 Licence
 
 Ce projet est sous licence privée. Tous droits réservés.
