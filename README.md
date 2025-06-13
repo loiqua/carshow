@@ -46,7 +46,7 @@ Car Show est une application web de présentation de voitures premium permettant
 
 1. Cloner le dépôt
    ```bash
-   git clone https://github.com/votre-utilisateur/car-show.git
+   git clone https://github.com/loiqua/car-show.git
    cd car-show
    ```
 
