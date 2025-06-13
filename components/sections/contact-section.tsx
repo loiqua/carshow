@@ -41,7 +41,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="font-medium">Téléphone</p>
-                  <p className="text-muted-foreground">+33 1 23 45 67 89</p>
+                  <p className="text-muted-foreground">+261 38 513 77 54</p>
                 </div>
               </motion.div>
               
@@ -57,7 +57,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="font-medium">Email</p>
-                  <p className="text-muted-foreground">contact@carshow.com</p>
+                  <p className="text-muted-foreground">hei.loiqua@gmail.com</p>
                 </div>
               </motion.div>
               
@@ -73,7 +73,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="font-medium">Adresse</p>
-                  <p className="text-muted-foreground">123 Avenue des Champs-Élysées, 75008 Paris</p>
+                  <p className="text-muted-foreground">lot 33GA ivandry Ambojatovo, Antananarivo</p>
                 </div>
               </motion.div>
             </div>

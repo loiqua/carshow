@@ -28,7 +28,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-card-foreground">Adresse</h3>
-                    <p className="text-muted-foreground">123 Avenue des Champs-Élysées<br />75008 Paris, France</p>
+                    <p className="text-muted-foreground">lot 33GA ivandry Ambojatovo<br />Antananarivo, Madagascar</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -37,8 +37,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-card-foreground">E-mail</h3>
-                    <a href="mailto:contact@carshow.com" className="text-muted-foreground hover:text-primary transition-colors">
-                      contact@carshow.com
+                    <a href="mailto:hei.loiqua@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                      hei.loiqua@gmail.com
                     </a>
                   </div>
                 </div>
@@ -48,8 +48,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-card-foreground">Téléphone</h3>
-                    <a href="tel:+33123456789" className="text-muted-foreground hover:text-primary transition-colors">
-                      +33 1 23 45 67 89
+                    <a href="tel:+261385137754" className="text-muted-foreground hover:text-primary transition-colors">
+                      +261 38 513 77 54
                     </a>
                   </div>
                 </div>
