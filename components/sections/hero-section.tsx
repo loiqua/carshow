@@ -7,26 +7,26 @@ import { motion } from "framer-motion";
 
 export function HeroSection() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted relative overflow-hidden">
+    <section className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted relative overflow-hidden">
       {/* Cercle décoratif en arrière-plan */}
-      <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
       
       <div className="container px-4 md:px-6 relative z-10">
-        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+        <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="space-y-6"
+            className="space-y-6 text-center lg:text-left"
           >
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
               Découvrez l&apos;excellence automobile
             </h1>
-            <p className="max-w-[600px] text-muted-foreground md:text-xl">
+            <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">
               Notre sélection exclusive de véhicules premium vous attend. Trouvez la voiture de vos rêves avec Car Show.
             </p>
-            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center lg:justify-start">
               <Link href="/search">
                 <Button size="lg" className="shadow-lg hover:shadow-primary/20 transition-all hover:scale-105 w-full sm:w-auto">
                   Explorer nos véhicules
@@ -44,7 +44,7 @@ export function HeroSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mx-auto lg:ml-auto"
+            className="mx-auto lg:ml-auto max-w-md lg:max-w-none"
           >
             <div className="aspect-video overflow-hidden rounded-xl shadow-2xl transform transition-transform duration-300 hover:scale-[1.02] ring-1 ring-primary/10">
               <Image

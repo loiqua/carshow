@@ -44,7 +44,7 @@ export function CarCard({ car, showActions = true }: CarCardProps) {
   const mainImage = getImageForCar(car);
 
   return (
-    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
+    <Card className="overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-lg">
       <div className="relative h-48 w-full">
         <Image
           src={mainImage}
@@ -97,16 +97,11 @@ export function CarCard({ car, showActions = true }: CarCardProps) {
         </div>
         <p className="mt-3 line-clamp-2 text-sm text-muted-foreground">{car.description}</p>
       </CardContent>
-      
+
       {showActions && (
-        <CardFooter className="flex gap-2 p-4 pt-0">
+        <CardFooter className="p-4 pt-0 mt-auto">
           <Button asChild className="w-full">
-            <Link href={`/search/${car.id}`}>
-              Voir en détail
-            </Link>
-          </Button>
-          <Button asChild variant="outline" className="w-full">
-            <Link href={`/appointments/new?carId=${car.id}`}>
+            <Link href={`/cars/${car.id}`}>
               Prendre rendez-vous
             </Link>
           </Button>
