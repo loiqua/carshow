@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Car, Cog, Palette, Users } from "lucide-react";
 
 interface ICarDetailPageProps {
-  params: { id: string };
+  readonly params: { readonly id: string };
 }
 
 async function getCarDetails(id: number) {
