@@ -6,9 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Car, Cog, Palette, Users } from "lucide-react";
 
-interface ICarDetailPageProps {
-  readonly params: { readonly id: string };
-}
+
 
 async function getCarDetails(id: number) {
   const car = await prisma.car.findUnique({
@@ -18,8 +16,9 @@ async function getCarDetails(id: number) {
   return car;
 }
 
-export default async function CarDetailPage({ params }: ICarDetailPageProps) {
-  const carId = parseInt(params.id, 10);
+export default async function CarDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const carId = parseInt(id, 10);
 
   if (isNaN(carId)) {
     return notFound();

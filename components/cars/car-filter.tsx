@@ -24,9 +24,10 @@ export interface FilterValues {
 
 interface CarFilterProps {
   readonly onFilter: (values: FilterValues) => void;
+  readonly initialValues?: Partial<FilterValues>;
 }
 
-export function CarFilter({ onFilter }: CarFilterProps) {
+export function CarFilter({ onFilter, initialValues }: CarFilterProps) {
   const [filterValues, setFilterValues] = useState<FilterValues>({
     brand: "all_brands",
     model: "",
@@ -35,6 +36,7 @@ export function CarFilter({ onFilter }: CarFilterProps) {
     motorType: "all_motor_types",
     color: "all_colors",
     type: "all_vehicle_types",
+    ...initialValues,
   });
 
   const handleInputChange = useCallback(
