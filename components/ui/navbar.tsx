@@ -39,9 +39,9 @@ export function Navbar() {
         </div>
         <div className="flex items-center gap-4">
           <ThemeToggle />
-          <Link href="/search">
+          <Link href="/intranet">
             <Button variant="outline" size="sm" className="font-medium hover:bg-primary hover:text-white transition-colors">
-              Voir nos véhicules
+              Intranet
             </Button>
           </Link>
         </div>
