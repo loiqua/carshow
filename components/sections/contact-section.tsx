@@ -1,7 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+
 import { motion } from "framer-motion";
+import { ContactForm } from "@/components/contact/contact-form";
 
 export function ContactSection() {
   return (
@@ -86,44 +87,7 @@ export function ContactSection() {
             className="space-y-5 bg-muted/50 p-6 rounded-xl shadow-sm border border-primary/10"
           >
             <h3 className="text-xl font-semibold">Envoyez-nous un message</h3>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-medium">
-                  Nom
-                </label>
-                <input 
-                  id="name" 
-                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" 
-                  placeholder="Votre nom" 
-                />
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium">
-                  Email
-                </label>
-                <input 
-                  id="email" 
-                  type="email" 
-                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" 
-                  placeholder="Votre email" 
-                />
-              </div>
-            </div>
-            
-            <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-medium">
-                Message
-              </label>
-              <textarea 
-                id="message" 
-                className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" 
-                placeholder="Votre message"
-              ></textarea>
-            </div>
-            
-            <Button className="w-full shadow-sm hover:shadow-md transition-all hover:bg-primary/90">
-              Envoyer
-            </Button>
+            <ContactForm />
           </motion.div>
         </div>
       </div>

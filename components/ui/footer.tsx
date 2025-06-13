@@ -2,6 +2,15 @@
 
 import Link from "next/link";
 import { Button } from "./button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { ContactForm } from "@/components/contact/contact-form";
 
 export function Footer() {
   return (
@@ -45,11 +54,24 @@ export function Footer() {
               <p className="text-sm text-muted-foreground">
                 Intéressé par un véhicule? Contactez-nous dès maintenant.
               </p>
-              <Link href="/contact">
-                <Button variant="outline" size="sm">
-                  Nous contacter
-                </Button>
-              </Link>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline" size="sm">
+                    Nous contacter
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[480px]">
+                  <DialogHeader>
+                    <DialogTitle>Contactez-nous</DialogTitle>
+                    <DialogDescription>
+                      Remplissez ce formulaire et notre équipe vous répondra dans les plus brefs délais.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <div className="py-4">
+                    <ContactForm />
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
